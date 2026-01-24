@@ -235,10 +235,10 @@ bool PostinstallRunnerAction::MountPartition(
     }
 
     // Run backuptool script
-    int ret = system("/postinstall/system/bin/backuptool_postinstall.sh");
-    if (ret == -1 || WEXITSTATUS(ret) != 0) {
-      LOG(ERROR) << "Backuptool postinstall step failed. ret=" << ret;
-    }
+    // int ret = system("/postinstall/system/bin/backuptool_postinstall.sh");
+    // if (ret == -1 || WEXITSTATUS(ret) != 0) {
+    //   LOG(ERROR) << "Backuptool postinstall step failed. ret=" << ret;
+    // }
 
     // Switch back to update_engine domain
     if (setexeccon(nullptr)) {
